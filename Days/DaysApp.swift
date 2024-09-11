@@ -11,7 +11,7 @@ import SwiftUI
 struct DaysApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EventView()
         }
     }
 }
