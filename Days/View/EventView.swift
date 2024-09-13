@@ -112,7 +112,7 @@ struct CustomSegmentedPicker: View {
                     ZStack {
                         if selectedSegment == segment {
                             RoundedRectangle(cornerRadius: 25.0)
-                                .fill(Color.blue)
+                                .fill(Color.accentColor)
                                 .matchedGeometryEffect(id: "picker", in: namespace)
                         }
                     }

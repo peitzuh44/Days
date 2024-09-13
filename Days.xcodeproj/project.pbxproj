@@ -15,6 +15,7 @@
 		AF593C552C94066A001806A8 /* DaysWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF593C482C940667001806A8 /* DaysWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AF593C5C2C9409E4001806A8 /* PhotoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */; };
 		AF593C5E2C941EB0001806A8 /* UpdateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF593C5D2C941EB0001806A8 /* UpdateEventView.swift */; };
+		AF593C602C94287D001806A8 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF593C5F2C94287D001806A8 /* Launch Screen.storyboard */; };
 		AF8D65CB2C9032240072C5D4 /* DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65CA2C9032240072C5D4 /* DaysApp.swift */; };
 		AF8D65CF2C9032270072C5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65CE2C9032270072C5D4 /* Assets.xcassets */; };
 		AF8D65D22C9032270072C5D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65D12C9032270072C5D4 /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		AF593C522C94066A001806A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF593C592C94067D001806A8 /* DaysWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysWidgetExtension.entitlements; sourceTree = "<group>"; };
 		AF593C5D2C941EB0001806A8 /* UpdateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEventView.swift; sourceTree = "<group>"; };
+		AF593C5F2C94287D001806A8 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		AF8D65C72C9032240072C5D4 /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8D65CA2C9032240072C5D4 /* DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysApp.swift; sourceTree = "<group>"; };
 		AF8D65CE2C9032270072C5D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				AF8D65CA2C9032240072C5D4 /* DaysApp.swift */,
 				AF8D65CE2C9032270072C5D4 /* Assets.xcassets */,
 				AF8D65D02C9032270072C5D4 /* Preview Content */,
+				AF593C5F2C94287D001806A8 /* Launch Screen.storyboard */,
 			);
 			path = Days;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF593C602C94287D001806A8 /* Launch Screen.storyboard in Resources */,
 				AF8D65D22C9032270072C5D4 /* Preview Assets.xcassets in Resources */,
 				AF8D65CF2C9032270072C5D4 /* Assets.xcassets in Resources */,
 			);
@@ -540,10 +544,12 @@
 				DEVELOPMENT_TEAM = N5MYS96KJV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo llibrary so you can pick a background for your events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -577,10 +583,12 @@
 				DEVELOPMENT_TEAM = N5MYS96KJV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need to access your photo llibrary so you can pick a background for your events";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

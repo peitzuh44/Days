@@ -12,6 +12,7 @@ struct DaysApp: App {
     var body: some Scene {
         WindowGroup {
             EventView()
+                .preferredColorScheme(.light)
         }
     }
 }
