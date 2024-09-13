@@ -9,6 +9,9 @@ import CoreData
 import UIKit
 import SwiftUI
 import WidgetKit
+
+
+
 class EventViewModel: ObservableObject {
     let manager = CoreDataManager.instance
     @Published var events: [Event] = []
@@ -86,7 +89,27 @@ class EventViewModel: ObservableObject {
         print("Widget reload triggered.")
         WidgetCenter.shared.reloadTimelines(ofKind: "DaysWidget")
     }
-
+    
+    // MARK: Update event
+    func updateEvent(event: Event, title: String, date: Date, image: UIImage?) {
+        event.title = title
+        event.date = date
+        
+        if let image = image {
+            if let photoURL = PhotoFileManager.instance.savePhoto(image: image, eventID: event.id ?? UUID()) {
+                event.photoURL = photoURL
+                
+            }
+        }
+        save()
+        saveNextEventToUserDefaults()
+        
+        // Trigger widget reload to reflect changes in the widget
+        print("Widget reload triggered for updated event.")
+        WidgetCenter.shared.reloadTimelines(ofKind: "DaysWidget")
+        
+    }
+    
 
     // Deleting Event
     func deleteEvent(event: Event) {

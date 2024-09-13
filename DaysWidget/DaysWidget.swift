@@ -64,7 +64,6 @@ struct SimpleEntry: TimelineEntry {
 
 struct DaysWidgetEntryView : View {
     var entry: Provider.Entry
-
     var body: some View {
         ZStack (alignment: .bottom){
             if let photo = entry.photo {
@@ -82,7 +81,6 @@ struct DaysWidgetEntryView : View {
                 .padding(-20)
                 
             VStack {
-                Spacer()
                 VStack (alignment: .leading, spacing: 2){
                     Text(entry.title)
                     Text(entry.date.daysFromNow())
@@ -110,20 +108,12 @@ struct DaysWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Next Event")
+        .description("Display your next event.")
     }
 }
 
 // MARK: Save next event to user default
-
-
-#Preview(as: .systemSmall) {
-    DaysWidget()
-} timeline: {
-    SimpleEntry(title: "Event Title", date: .now, photo: nil)
-    SimpleEntry(title: "Event Title", date: .now, photo: nil)
-}
 
 extension Date {
     func daysFromNow() -> String {

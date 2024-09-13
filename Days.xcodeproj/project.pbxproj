@@ -14,6 +14,7 @@
 		AF593C512C94066A001806A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF593C502C94066A001806A8 /* Assets.xcassets */; };
 		AF593C552C94066A001806A8 /* DaysWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF593C482C940667001806A8 /* DaysWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AF593C5C2C9409E4001806A8 /* PhotoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */; };
+		AF593C5E2C941EB0001806A8 /* UpdateEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF593C5D2C941EB0001806A8 /* UpdateEventView.swift */; };
 		AF8D65CB2C9032240072C5D4 /* DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65CA2C9032240072C5D4 /* DaysApp.swift */; };
 		AF8D65CF2C9032270072C5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65CE2C9032270072C5D4 /* Assets.xcassets */; };
 		AF8D65D22C9032270072C5D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65D12C9032270072C5D4 /* Preview Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		AF593C502C94066A001806A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF593C522C94066A001806A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF593C592C94067D001806A8 /* DaysWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysWidgetExtension.entitlements; sourceTree = "<group>"; };
+		AF593C5D2C941EB0001806A8 /* UpdateEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEventView.swift; sourceTree = "<group>"; };
 		AF8D65C72C9032240072C5D4 /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8D65CA2C9032240072C5D4 /* DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysApp.swift; sourceTree = "<group>"; };
 		AF8D65CE2C9032270072C5D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				AF8D65D82C90323C0072C5D4 /* EventView.swift */,
 				AF8D65DA2C9032540072C5D4 /* EventDetailView.swift */,
 				AF8D65F02C916F570072C5D4 /* PhotoCroppingView.swift */,
+				AF593C5D2C941EB0001806A8 /* UpdateEventView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				AF8D65E22C9138CA0072C5D4 /* CoreDataManager.swift in Sources */,
 				AF8D65F42C91741F0072C5D4 /* Date.swift in Sources */,
 				AF8D65E02C9137DF0072C5D4 /* Model.xcdatamodeld in Sources */,
+				AF593C5E2C941EB0001806A8 /* UpdateEventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

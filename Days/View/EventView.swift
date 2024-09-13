@@ -15,7 +15,7 @@ struct EventView: View {
     @State private var pastOrUpcoming: String = "upcoming" // Track the picker state
     @State private var showAddEventView = false
     @State private var showActionSheet = false
-    
+    @State private var showEditView = false
     @State private var selectedImage: UIImage?
     @State private var showPicker = false
     
@@ -66,6 +66,30 @@ struct EventView: View {
         .sheet(isPresented: $showAddEventView, content: {
             AddEventView(viewModel: viewModel)
         })
+        .sheet(isPresented: $showEditView) {
+            if let selectedEvent = selectedEvent {
+                UpdateEventView(selectedEvent: selectedEvent, viewModel: viewModel, showDetail: $showDetail)
+            }
+        }
+        // Action Sheet
+        .confirmationDialog("Choose an Option", isPresented: $showActionSheet, titleVisibility: .visible) {
+            Button("edit") {
+                showEditView = true
+            }
+
+            Button(role: .destructive) {
+                if let selectedEvent = selectedEvent {
+                    viewModel.deleteEvent(event: selectedEvent)
+                    showDetail = false
+                }
+            } label: {
+                Text("delete")
+                    .foregroundStyle(Color.red)
+            }
+            Button("Cancel", role: .cancel) { }
+        }
+
+        
     }
 }
 

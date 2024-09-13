@@ -55,40 +55,6 @@ class PhotoFileManager {
         return nil
     }
 
-    // MARK: Save Photo
-//    func savePhoto(image: UIImage, eventID: UUID) -> String? {
-//        guard let appGroupURL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.days.events") else {
-//            print("Error: App Group container not found")
-//            return nil
-//        }
-//        
-//        let fileName = "\(eventID).jpg"
-//        let fileURL = appGroupURL.appendingPathComponent(fileName)
-//        
-//        if let data = image.jpegData(compressionQuality: 0.8) {
-//            do {
-//                try data.write(to: fileURL)
-//                print("Successfully saved photo at: \(fileURL.path)")
-//                
-//                // Check the contents of the App Group directory
-//                do {
-//                    let directoryContents = try FileManager.default.contentsOfDirectory(atPath: appGroupURL.path)
-//                    print("App Group directory contents after saving: \(directoryContents)")
-//                } catch {
-//                    print("Error listing directory contents: \(error)")
-//                }
-//                
-//                return fileName
-//            } catch let error {
-//                print("Error saving image: \(error)")
-//                return nil
-//            }
-//        }
-//        return nil
-//    }
-//
-
-
     // MARK: Load Photo
     func loadPhoto(fileName: String) -> UIImage? {
         // Use App Group's shared directory
