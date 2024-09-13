@@ -12,7 +12,7 @@ struct EventView: View {
     @Namespace var namespace // Shared namespace
     @State var showDetail: Bool = false
     @State private var selectedEvent: Event? = nil // Track the selected event
-    @State private var pastOrUpcoming: String = "upcoming"
+    @State private var pastOrUpcoming: String = "upcoming" // Track the picker state
     @State private var showAddEventView = false
     @State private var showActionSheet = false
     
@@ -41,6 +41,15 @@ struct EventView: View {
                     // Picker
                     CustomSegmentedPicker(segments: ["past", "upcoming"], selectedSegment: $pastOrUpcoming)
                         .padding()
+                        .onChange(of: pastOrUpcoming) { value in
+                            // Fetch events based on the selected segment
+                            if value == "upcoming" {
+                                viewModel.getUpcomingEvents()
+                            } 
+                            if value == "past" {
+                                viewModel.getPastEvents()
+                            }
+                        }
                 }
             } else if let selectedEvent = selectedEvent {
                 EventDetailView(namespace: namespace, event: selectedEvent)
@@ -52,21 +61,13 @@ struct EventView: View {
             }
             
             CustomNavBar(showAddEventView: $showAddEventView, showDetail: $showDetail, showActionSheet: $showActionSheet)
-
         }
         // sheet
         .sheet(isPresented: $showAddEventView, content: {
             AddEventView(viewModel: viewModel)
-        }
-        )
+        })
     }
 }
-
-#Preview {
-    EventView()
-}
-
-
 
 
 struct CustomSegmentedPicker: View {
@@ -97,8 +98,6 @@ struct CustomSegmentedPicker: View {
                         self.selectedSegment = segment
                     }
                 }
-                
-                
             }
         }
         .padding(8)
@@ -136,13 +135,6 @@ struct CustomNavBar: View {
 
                 }
             }
-            Spacer()
-            Text("Filter")
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 30.0)
-                    .fill(.thinMaterial)
-                )
-            
             
             Spacer()
             Button {

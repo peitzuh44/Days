@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF593C492C940667001806A8 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8D65FB2C91A37C0072C5D4 /* WidgetKit.framework */; };
+		AF593C4A2C940667001806A8 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8D65FD2C91A37D0072C5D4 /* SwiftUI.framework */; };
+		AF593C4D2C940667001806A8 /* DaysWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF593C4C2C940667001806A8 /* DaysWidgetBundle.swift */; };
+		AF593C4F2C940667001806A8 /* DaysWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF593C4E2C940667001806A8 /* DaysWidget.swift */; };
+		AF593C512C94066A001806A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF593C502C94066A001806A8 /* Assets.xcassets */; };
+		AF593C552C94066A001806A8 /* DaysWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AF593C482C940667001806A8 /* DaysWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		AF593C5C2C9409E4001806A8 /* PhotoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */; };
 		AF8D65CB2C9032240072C5D4 /* DaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65CA2C9032240072C5D4 /* DaysApp.swift */; };
-		AF8D65CD2C9032240072C5D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65CC2C9032240072C5D4 /* ContentView.swift */; };
 		AF8D65CF2C9032270072C5D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65CE2C9032270072C5D4 /* Assets.xcassets */; };
 		AF8D65D22C9032270072C5D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF8D65D12C9032270072C5D4 /* Preview Assets.xcassets */; };
 		AF8D65D92C90323C0072C5D4 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65D82C90323C0072C5D4 /* EventView.swift */; };
@@ -21,12 +27,42 @@
 		AF8D65E82C9149E50072C5D4 /* PhotoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */; };
 		AF8D65EC2C9158070072C5D4 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65EB2C9158070072C5D4 /* PhotoPicker.swift */; };
 		AF8D65F12C916F570072C5D4 /* PhotoCroppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65F02C916F570072C5D4 /* PhotoCroppingView.swift */; };
+		AF8D65F42C91741F0072C5D4 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8D65F32C91741F0072C5D4 /* Date.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AF593C532C94066A001806A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF8D65BF2C9032240072C5D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF593C472C940667001806A8;
+			remoteInfo = DaysWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF8D66112C91A3800072C5D4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AF593C552C94066A001806A8 /* DaysWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AF593C482C940667001806A8 /* DaysWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DaysWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF593C4C2C940667001806A8 /* DaysWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysWidgetBundle.swift; sourceTree = "<group>"; };
+		AF593C4E2C940667001806A8 /* DaysWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysWidget.swift; sourceTree = "<group>"; };
+		AF593C502C94066A001806A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF593C522C94066A001806A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF593C592C94067D001806A8 /* DaysWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysWidgetExtension.entitlements; sourceTree = "<group>"; };
 		AF8D65C72C9032240072C5D4 /* Days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF8D65CA2C9032240072C5D4 /* DaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysApp.swift; sourceTree = "<group>"; };
-		AF8D65CC2C9032240072C5D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF8D65CE2C9032270072C5D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF8D65D12C9032270072C5D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF8D65D82C90323C0072C5D4 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
@@ -39,9 +75,21 @@
 		AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFileManager.swift; sourceTree = "<group>"; };
 		AF8D65EB2C9158070072C5D4 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		AF8D65F02C916F570072C5D4 /* PhotoCroppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCroppingView.swift; sourceTree = "<group>"; };
+		AF8D65F32C91741F0072C5D4 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		AF8D65FB2C91A37C0072C5D4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AF8D65FD2C91A37D0072C5D4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AF593C452C940667001806A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF593C4A2C940667001806A8 /* SwiftUI.framework in Frameworks */,
+				AF593C492C940667001806A8 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF8D65C42C9032240072C5D4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +100,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF593C4B2C940667001806A8 /* DaysWidget */ = {
+			isa = PBXGroup;
+			children = (
+				AF593C4C2C940667001806A8 /* DaysWidgetBundle.swift */,
+				AF593C4E2C940667001806A8 /* DaysWidget.swift */,
+				AF593C502C94066A001806A8 /* Assets.xcassets */,
+				AF593C522C94066A001806A8 /* Info.plist */,
+			);
+			path = DaysWidget;
+			sourceTree = "<group>";
+		};
+		AF593C5A2C940999001806A8 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		AF8D65BE2C9032240072C5D4 = {
 			isa = PBXGroup;
 			children = (
+				AF593C5A2C940999001806A8 /* Shared */,
+				AF593C592C94067D001806A8 /* DaysWidgetExtension.entitlements */,
 				AF8D65C92C9032240072C5D4 /* Days */,
+				AF593C4B2C940667001806A8 /* DaysWidget */,
+				AF8D65FA2C91A37C0072C5D4 /* Frameworks */,
 				AF8D65C82C9032240072C5D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				AF8D65C72C9032240072C5D4 /* Days.app */,
+				AF593C482C940667001806A8 /* DaysWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,12 +143,12 @@
 		AF8D65C92C9032240072C5D4 /* Days */ = {
 			isa = PBXGroup;
 			children = (
+				AF8D65F22C9174100072C5D4 /* Extensions */,
 				AF8D65EF2C915D7B0072C5D4 /* ViewModel */,
 				AF8D65EE2C915D6F0072C5D4 /* Manager */,
 				AF8D65ED2C915D610072C5D4 /* View */,
 				AF8D65DE2C9137DF0072C5D4 /* Model.xcdatamodeld */,
 				AF8D65CA2C9032240072C5D4 /* DaysApp.swift */,
-				AF8D65CC2C9032240072C5D4 /* ContentView.swift */,
 				AF8D65CE2C9032270072C5D4 /* Assets.xcassets */,
 				AF8D65D02C9032270072C5D4 /* Preview Content */,
 			);
@@ -106,7 +178,6 @@
 		AF8D65EE2C915D6F0072C5D4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				AF8D65E72C9149E50072C5D4 /* PhotoFileManager.swift */,
 				AF8D65EB2C9158070072C5D4 /* PhotoPicker.swift */,
 				AF8D65E12C9138CA0072C5D4 /* CoreDataManager.swift */,
 			);
@@ -121,9 +192,43 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		AF8D65F22C9174100072C5D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D65F32C91741F0072C5D4 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF8D65FA2C91A37C0072C5D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF8D65FB2C91A37C0072C5D4 /* WidgetKit.framework */,
+				AF8D65FD2C91A37D0072C5D4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AF593C472C940667001806A8 /* DaysWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF593C562C94066A001806A8 /* Build configuration list for PBXNativeTarget "DaysWidgetExtension" */;
+			buildPhases = (
+				AF593C442C940667001806A8 /* Sources */,
+				AF593C452C940667001806A8 /* Frameworks */,
+				AF593C462C940667001806A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DaysWidgetExtension;
+			productName = DaysWidgetExtension;
+			productReference = AF593C482C940667001806A8 /* DaysWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		AF8D65C62C9032240072C5D4 /* Days */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF8D65D52C9032270072C5D4 /* Build configuration list for PBXNativeTarget "Days" */;
@@ -131,10 +236,12 @@
 				AF8D65C32C9032240072C5D4 /* Sources */,
 				AF8D65C42C9032240072C5D4 /* Frameworks */,
 				AF8D65C52C9032240072C5D4 /* Resources */,
+				AF8D66112C91A3800072C5D4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AF593C542C94066A001806A8 /* PBXTargetDependency */,
 			);
 			name = Days;
 			productName = Days;
@@ -151,6 +258,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					AF593C472C940667001806A8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					AF8D65C62C9032240072C5D4 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -170,11 +280,20 @@
 			projectRoot = "";
 			targets = (
 				AF8D65C62C9032240072C5D4 /* Days */,
+				AF593C472C940667001806A8 /* DaysWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AF593C462C940667001806A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF593C512C94066A001806A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF8D65C52C9032240072C5D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +306,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AF593C442C940667001806A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF593C4F2C940667001806A8 /* DaysWidget.swift in Sources */,
+				AF593C5C2C9409E4001806A8 /* PhotoFileManager.swift in Sources */,
+				AF593C4D2C940667001806A8 /* DaysWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF8D65C32C9032240072C5D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,20 +324,86 @@
 				AF8D65F12C916F570072C5D4 /* PhotoCroppingView.swift in Sources */,
 				AF8D65D92C90323C0072C5D4 /* EventView.swift in Sources */,
 				AF8D65DD2C9032610072C5D4 /* EventItem.swift in Sources */,
-				AF8D65CD2C9032240072C5D4 /* ContentView.swift in Sources */,
 				AF8D65EC2C9158070072C5D4 /* PhotoPicker.swift in Sources */,
 				AF8D65E62C91408B0072C5D4 /* AddEventView.swift in Sources */,
 				AF8D65E82C9149E50072C5D4 /* PhotoFileManager.swift in Sources */,
 				AF8D65CB2C9032240072C5D4 /* DaysApp.swift in Sources */,
 				AF8D65E42C9139DF0072C5D4 /* EventViewModel.swift in Sources */,
 				AF8D65E22C9138CA0072C5D4 /* CoreDataManager.swift in Sources */,
+				AF8D65F42C91741F0072C5D4 /* Date.swift in Sources */,
 				AF8D65E02C9137DF0072C5D4 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AF593C542C94066A001806A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF593C472C940667001806A8 /* DaysWidgetExtension */;
+			targetProxy = AF593C532C94066A001806A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		AF593C572C94066A001806A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DaysWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N5MYS96KJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DaysWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DaysWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.Days.DaysWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF593C582C94066A001806A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = DaysWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N5MYS96KJV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DaysWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DaysWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huang.Days.DaysWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		AF8D65D32C9032270072C5D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -261,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -318,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -331,8 +526,10 @@
 		AF8D65D62C9032270072C5D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Days/Days.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Days/Preview Content\"";
@@ -343,8 +540,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -366,8 +563,10 @@
 		AF8D65D72C9032270072C5D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Days/Days.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Days/Preview Content\"";
@@ -378,8 +577,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +600,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AF593C562C94066A001806A8 /* Build configuration list for PBXNativeTarget "DaysWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF593C572C94066A001806A8 /* Debug */,
+				AF593C582C94066A001806A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AF8D65C22C9032240072C5D4 /* Build configuration list for PBXProject "Days" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

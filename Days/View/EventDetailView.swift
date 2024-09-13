@@ -11,23 +11,35 @@ struct EventDetailView: View {
     var event: Event
     
     var body: some View {
+        ZStack {
+            // Gradient
+            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0),Color.black.opacity(0.1),  Color.black.opacity(0.6)]), startPoint: .top, endPoint: .bottom)
         VStack {
             Spacer()
             VStack {
+                Text((event.date?.daysFromNow() ?? ""))
+                    .font(.title3)
+                    .matchedGeometryEffect(id: "CalculatedDays-\(String(describing: event.id))", in: namespace)
                 Text(event.title ?? "")
                     .font(.largeTitle)
                     .bold()
                     .matchedGeometryEffect(id: "title-\(String(describing: event.id))", in: namespace)
-
-                Text("153 days from now")
-                    .font(.title3)
-                    .matchedGeometryEffect(id: "date-\(String(describing: event.id))", in: namespace)
-
+                
+                Text((event.date?.formatted("MMMM dd, yyyy") ?? ""))
+                    .font(.headline)
+                    .padding(.horizontal)
+                    .padding(.vertical, 8)
+                    .background(RoundedRectangle(cornerRadius: 30.0)
+                        .fill(.ultraThinMaterial)
+                    )
+                
             }
             .foregroundStyle(Color.white)
-            .padding()
-            .padding(.vertical, 20)
         }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 40)
+           
+    }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
         .background(

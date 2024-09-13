@@ -11,20 +11,27 @@ struct EventItem: View {
     var namespace: Namespace.ID // Accept shared namespace as a parameter
     var event: Event
     var body: some View {
-        VStack {
-            Spacer()
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color.black.opacity(0),Color.black.opacity(0.1),  Color.black.opacity(0.6)]), startPoint: .top, endPoint: .bottom)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .frame(maxWidth: .infinity, maxHeight: 350)
             VStack {
-                Text(event.title ?? "")
-                    .font(.largeTitle)
-                    .bold()
-                    .matchedGeometryEffect(id: "title-\(String(describing: event.id))", in: namespace)
-                
-                Text("153 days from now")
-                    .font(.title3)
-                    .matchedGeometryEffect(id: "date-\(String(describing: event.id))", in: namespace)
+                Spacer()
+                VStack{
+                    Text((event.date?.daysFromNow() ?? ""))
+                        .font(.title3)
+                        .matchedGeometryEffect(id: "CalculatedDays-\(String(describing: event.id))", in: namespace)
+                    Text(event.title ?? "")
+                        .font(.largeTitle)
+                        .bold()
+                        .matchedGeometryEffect(id: "title-\(String(describing: event.id))", in: namespace)
+                    
+                }
+                .foregroundStyle(Color.white)
+                .padding(.horizontal, 12)
+                .padding(.vertical)
             }
-            .foregroundStyle(Color.white)
-            .padding()
+            
         }
         .frame(maxWidth: .infinity)
         .frame(height: 350)
